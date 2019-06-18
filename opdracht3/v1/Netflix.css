@@ -1,0 +1,103 @@
+p {
+    color: aliceblue;
+}
+
+body {
+    background-color: black;
+    margin: 0em;
+    padding: 0em;
+    line-height: 1.5em;
+    font-size: 1em;
+
+}
+
+header nav li {
+    background-color: black;
+    list-style-type: none;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+    border: 0px;
+}
+
+.afbeelding {
+    width: 400px;
+    height: 600px;
+}
+
+
+li:hover {
+    background: grey;
+
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+}
+
+.button {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+
+.button a {
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+}
+
+.container:hover .button {
+    opacity: 1;
+}
+
+
+.download {
+    width: 25%;
+    height: 25%;
+}
+
+.container:hover .afbeelding {
+    opacity: 0.5;
+}
+
+
+
+.downloaden {
+    background-image: url(afbeeldingen/rotate.png);
+    -webkit-animation: spin 2s infinite;
+}
+
+
+.complete {
+    background-image: url(afbeeldingen/checked.png);
+    -webkit-animation: none;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

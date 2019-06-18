@@ -1,0 +1,266 @@
+body {
+    background-color: black;
+    margin: 0em;
+    padding: 0em;
+    line-height: 1.5em;
+    font-size: 1em;
+
+}
+
+
+/*------ nav -----*/
+
+header nav li {
+    background-color: black;
+    list-style-type: none;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+    border: 0px;
+}
+
+li:hover {
+    background: grey;
+
+}
+
+/*--- afbeelding ---*/
+
+.afbeelding {
+    width: 400px;
+    height: 600px;
+    margin: -7em 0em 0em 0em;
+}
+
+/*-- verkleinen vergroten schermen --*/
+
+@media screen and (min-width: 1000px) {
+    article {
+        width: 41%;
+        margin: 1em;
+
+    }
+    h3 {
+        color: #15038C;
+        margin: 2em 1em 0em 0.5em;
+        font-size: 3em;
+    }
+    #grid1 {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        margin: 2em;
+        grid-gap: 1em;
+        justify-content: center;
+    }
+    .grid {
+        width: 100%;
+        margin: 0.5em auto 0em auto;
+    }
+
+
+}
+
+@media screen and (min-width: 710px) and (max-width: 1000px) {
+    article {
+        width: 39%;
+        margin: 1em;
+    }
+    h3 {
+        color: #15038C;
+        margin: 2em 1em 0em 0.5em;
+        font-size: 2em;
+    }
+    #grid1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1em;
+        justify-content: center;
+        margin: 2em;
+    }
+    .grid {
+        width: 100%;
+        margin: 0.5em auto 0em auto;
+
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 710px) {
+    article {
+        margin: 1em;
+    }
+    h3 {
+        color: #15038C;
+        text-align: center;
+        font-size: 2em;
+    }
+    #index {
+        background-size: 120%;
+    }
+    #grid1 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-columns: auto;
+        margin: 1em;
+        grid-gap: 1em;
+        justify-content: center;
+        margin: 3em;
+    }
+    .grid {
+        width: 100%;
+        margin: 1em auto;
+    }
+}
+
+/*---- button -----*/
+
+.download {
+    text-indent: -20000em;
+    background-color: transparent;
+    background-image: url(afbeeldingen/download.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    box-shadow: none;
+    width: 10%;
+    height: 5em;
+    width: 5em;
+    margin: 0em;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+}
+
+.download1 {
+    text-indent: -20000em;
+    background-color: transparent;
+    background-image: url(afbeeldingen/download.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    box-shadow: none;
+    width: 10%;
+    height: 5em;
+    width: 5em;
+    margin: 0em;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+}
+
+
+.downloaden {
+    background-image: url(afbeeldingen/rotate.png);
+    -webkit-animation: spin 2s infinite;
+
+}
+
+
+
+.complete {
+    background-image: url(afbeeldingen/checked.png);
+    -webkit-animation: none;
+}
+
+
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+article .download {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: none;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+article .download1 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+article {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+article:hover {
+    opacity: 0.5;
+}
+
+article:hover .download {
+    opacity: 1;
+}
+
+article:hover .download1 {
+    opacity: 1;
+}
+
+/*--- gedownload ---*/
+
+.gedownload {
+    position: relative;
+}
+
+.gedownload:before {
+    content: '';
+    background-image: url(afbeeldingen/checked.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: -1em;
+    top: .5em;
+    transition: all 1s ease-in;
+    opacity: 0;
+}
+
+.like:before {
+    left: 110%;
+    transition: all 1s ease-in;
+    top: -.001em;
+    opacity: 1;
+}
